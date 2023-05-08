@@ -1,41 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joule Studios</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #203354;
-            color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            margin: 0;
-            margin-bottom: 10px;
-            font-size: 2rem;
-        }
-        p {
-            margin: 5px 0;
-            font-size: 1.2rem;
-        }
-    </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.5">
+  <style type="text/css">
+    body {background-color: #141b33}
+    p.p2 {margin: 0.0px 0.0px 5.0px 0.0px; font: 14.4px Helvetica; color: #efefef; -webkit-text-stroke: #efefef}
+    span.s1 {font-kerning: none; background-color: #141b33}
+  </style>
 </head>
 <body>
-    <h1>Joule Studios</h1>
-    <p>Professional Content Production Since 2017</p>
-    <p>Commercial Photography and Videography</p>
-    <p>Miami Based, Available Worldwide</p>
-    <p>julian@joulestudios.com</p>
+<canvas id="pong" width="600" height="400"></canvas>
+<h1 style="margin: 0.0px 0.0px 10.0px 0.0px; font: 24.0px Helvetica; color: #efefef; -webkit-text-stroke: #efefef"><span class="s1"><b>Joule Studios</b></span></h1>
+<p class="p2"><span class="s1">Professional Content Production Since 2017</span></p>
+<p class="p2"><span class="s1">Commercial Photography and Videography</span></p>
+<p class="p2"><span class="s1">Miami Based, Available Worldwide</span></p>
+<p class="p2"><span class="s1">julian@joulestudios.com</span></p>
+<script>
+  const canvas = document.getElementById('pong');
+  const ctx = canvas.getContext('2d');
+
+  // Create the paddle and ball objects
+  const paddleWidth = 10;
+  const paddleHeight = 100;
+  const ballSize = 10;
+  const player = { x: 0, y: canvas.height / 2 - paddleHeight / 2, width: paddleWidth, height: paddleHeight, dy: 4 };
+  const computer = { x: canvas.width - paddleWidth, y: canvas.height / 2 - paddleHeight / 2, width: paddleWidth, height: paddleHeight, dy: 4 };
+  const ball = { x: canvas.width / 2, y: canvas.height / 2, width: ballSize, height: ballSize, dx: 4, dy: 4 };
+
+  // Function to draw the paddle and ball
+  function drawRect(x, y, width, height, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, width, height);
+  }
+
+  // Function to update the game state
+  function update() {
+    // Move the paddles
+    player.y += player.dy;
+    computer.y += computer.dy;
+
+    // Check for paddle collisions with the canvas
+    if (player.y < 0 || player.y + player.height > canvas.height) player.dy = -player.dy;
+    if (computer.y < 0 || computer.y + computer.height > canvas.height) computer.dy = -computer.dy;
+
+    // Move the ball
+    ball.x += ball.dx;
+    ball.y += ball.dy;
+
+    // Check for ball collisions with the canvas
+    if (ball.y < 0 || ball.y + ball.height > canvas.height) ball.dy = -ball.dy;
+
+    // Check for ball collisions with the paddles
+    if ((ball.x < player.width && ball.y + ball.height > player.y && ball.y < player.y + player.height) || (ball.x + ball.width > computer.x && ball.y + ball.height > computer.y && ball.y < computer.y + computer.height)) ball.dx = -ball.dx;
+
+    // Check for ball collisions with the left and right canvas edges
+    if (ball.x < 0 || ball.x + ball.width > canvas.width) {
+      ball.x = canvas.width / 2;
+      ball.y = canvas.height / 2;
+      ball.dx = -ball.dx;
+    }
+  }
+
+  // Function to render the game
+  function render() {
+    // Clear the canvas
+    drawRect(0, 0, canvas.width, canvas.height, 'black');
+
+    // Draw the paddles and ball
+    drawRect(player.x, player.y, player.width, player.height, 'white');
+    drawRect(computer.x, computer.y, computer.width, computer.height, 'white');
+    drawRect(ball.x, ball.y, ball.width, ball.height, 'white');
+  }
+
+  // Function to run the game loop
+ 
+
 </body>
 </html>
