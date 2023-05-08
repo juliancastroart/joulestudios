@@ -77,7 +77,14 @@
   }
 
   // Function to run the game loop
- 
+   function gameLoop() {
+    update();
+    render();
+    requestAnimationFrame(gameLoop);
+  }
 
+  gameLoop();
+
+</script>
 </body>
 </html>
