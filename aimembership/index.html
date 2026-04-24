@@ -3,45 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julian Castro | AI and Automation Support for Service Business Owners</title>
-    <meta name="description" content="Ongoing AI and automation support for service business owners and operators. Reduce repetitive work, tighten workflows, and keep practical improvements moving one request at a time.">
+    <title>Julian Castro | AI Automation Membership</title>
+    <meta name="description" content="Ongoing AI and automation support for owner-led service teams. Start with a $1,000 audit, then continue month to month for implementation support.">
     <link rel="canonical" href="https://www.joulestudios.com/aimembership/">
     <meta name="theme-color" content="#203354">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Julian Castro | AI and Automation Support for Service Business Owners">
-    <meta property="og:description" content="Practical AI and automation support for service business owners and operators who want to reduce repetitive work, tighten workflows, and keep improvements moving.">
+    <meta property="og:title" content="Julian Castro | AI Automation Membership">
+    <meta property="og:description" content="Save hours every week by removing repetitive admin, messy handoffs, and disconnected tools with AI and automation support.">
     <meta property="og:url" content="https://www.joulestudios.com/aimembership/">
     <meta property="og:site_name" content="Joule Studios">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Julian Castro | AI and Automation Support for Service Business Owners">
-    <meta name="twitter:description" content="Reduce repetitive work, tighten workflows, and keep practical AI and automation improvements moving in your business.">
+    <meta name="twitter:title" content="Julian Castro | AI Automation Membership">
+    <meta name="twitter:description" content="Ongoing AI and automation support for owner-led service teams.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <style>
         :root {
             --brand-blue: #203354;
             --brand-blue-deep: #16233a;
             --brand-blue-soft: #314867;
-            --bg: #f4efe7;
-            --surface: rgba(255, 252, 247, 0.88);
-            --surface-strong: rgba(255, 253, 250, 0.94);
-            --surface-deep: rgba(17, 28, 48, 0.94);
+            --surface: rgba(255, 252, 247, 0.90);
+            --surface-strong: rgba(255, 253, 250, 0.96);
             --text: #1f1d18;
             --muted: #5f5a52;
             --border: rgba(31, 29, 24, 0.11);
             --accent-soft: rgba(32, 51, 84, 0.10);
-            --accent-medium: rgba(32, 51, 84, 0.16);
             --warm-accent: #f2cf79;
-            --warm-accent-deep: #e2b45c;
             --footer-text: rgba(248, 244, 238, 0.78);
             --shadow: 0 24px 60px rgba(19, 27, 42, 0.10);
             --shadow-soft: 0 18px 42px rgba(19, 27, 42, 0.08);
             --shadow-deep: 0 28px 70px rgba(10, 16, 28, 0.32);
             --max-width: 1160px;
-            --radius-xl: 32px;
-            --radius-lg: 26px;
-            --radius-md: 18px;
+            --radius-xl: 28px;
+            --radius-md: 16px;
         }
 
         * {
@@ -61,6 +56,7 @@
                 radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 24%),
                 radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.08), transparent 22%),
                 linear-gradient(180deg, #2b4161 0%, var(--brand-blue) 28%, #182946 100%);
+            overflow-x: hidden;
         }
 
         a {
@@ -81,7 +77,7 @@
             margin: 0 0 14px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            font-size: 0.79rem;
+            font-size: 0.78rem;
             font-weight: 800;
             color: var(--muted);
         }
@@ -90,7 +86,7 @@
         section {
             position: relative;
             overflow: hidden;
-            padding: 40px 34px;
+            padding: 38px 34px;
             border: 1px solid var(--border);
             border-radius: var(--radius-xl);
             background: var(--surface);
@@ -99,7 +95,6 @@
         }
 
         .hero {
-            padding: 36px 34px 34px;
             background:
                 linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 252, 247, 0.80)),
                 linear-gradient(180deg, rgba(32, 51, 84, 0.08), rgba(32, 51, 84, 0));
@@ -108,7 +103,7 @@
         .hero::before {
             content: "";
             position: absolute;
-            inset: auto -12% -28% auto;
+            inset: auto -12% -30% auto;
             width: 420px;
             height: 420px;
             border-radius: 999px;
@@ -119,9 +114,7 @@
         .hero-copy {
             position: relative;
             z-index: 1;
-            display: grid;
-            justify-items: start;
-            max-width: 1060px;
+            max-width: 840px;
         }
 
         .topline {
@@ -130,15 +123,16 @@
             gap: 10px;
             margin-bottom: 18px;
             padding: 10px 14px;
+            border: 1px solid rgba(31, 29, 24, 0.08);
             border-radius: 999px;
             background: rgba(255, 255, 255, 0.64);
-            border: 1px solid rgba(31, 29, 24, 0.08);
-            font-size: 0.94rem;
-            font-weight: 700;
             color: var(--brand-blue);
+            font-size: 0.94rem;
+            font-weight: 800;
         }
 
-        .topline-dot {
+        .topline-dot,
+        .pill-note::before {
             width: 10px;
             height: 10px;
             border-radius: 999px;
@@ -158,52 +152,45 @@
 
         h1 {
             max-width: 13.5ch;
-            font-size: clamp(2.9rem, 6.4vw, 5.3rem);
+            font-size: clamp(3rem, 6.2vw, 5.25rem);
         }
 
         h2 {
-            font-size: clamp(2.05rem, 4vw, 3.3rem);
             max-width: 16ch;
+            font-size: clamp(2rem, 3.8vw, 3.15rem);
         }
 
         h3 {
-            font-size: 1.2rem;
-            line-height: 1.16;
+            font-size: 1.18rem;
+            line-height: 1.2;
         }
 
         .intro,
         .section-lead,
         .muted,
-        .about-copy p,
-        .faq-item p {
+        .faq-item p,
+        .request-card p,
+        .step-card p,
+        .price-card p,
+        .proof-note p {
             color: var(--muted);
         }
 
         .intro {
             max-width: 48rem;
             margin: 20px 0 0;
-            font-size: clamp(1.08rem, 1.9vw, 1.3rem);
+            font-size: clamp(1.08rem, 1.75vw, 1.28rem);
         }
 
         .hero-note {
             max-width: 46rem;
             margin: 14px 0 0;
             color: var(--brand-blue-soft);
-            font-weight: 600;
-            line-height: 1.6;
+            font-weight: 700;
         }
 
-        .hero-note strong {
-            color: var(--brand-blue);
-        }
-
-        .section-lead {
-            max-width: 44rem;
-            margin: 16px 0 0;
-            font-size: 1.08rem;
-        }
-
-        .hero-actions {
+        .hero-actions,
+        .section-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
@@ -215,15 +202,15 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-height: 66px;
+            min-height: 64px;
             padding: 0 30px;
-            border-radius: 999px;
             border: 1px solid rgba(162, 119, 22, 0.18);
+            border-radius: 999px;
             background: linear-gradient(180deg, #f5d98c, var(--warm-accent));
             color: var(--brand-blue);
-            text-decoration: none;
             text-align: center;
-            font-size: 1.05rem;
+            text-decoration: none;
+            font-size: 1.04rem;
             font-weight: 800;
             box-shadow:
                 0 18px 36px rgba(19, 27, 42, 0.12),
@@ -234,10 +221,10 @@
         .button:hover,
         .button:focus-visible {
             transform: translateY(-1px);
+            background: linear-gradient(180deg, #f8df9d, #f4d288);
             box-shadow:
                 0 22px 42px rgba(19, 27, 42, 0.16),
                 0 12px 28px rgba(204, 152, 43, 0.20);
-            background: linear-gradient(180deg, #f8df9d, #f4d288);
         }
 
         .button:focus-visible {
@@ -249,56 +236,117 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 0;
-            font-size: 0.98rem;
-            font-weight: 800;
             color: var(--brand-blue-soft);
+            font-weight: 800;
         }
 
         .pill-note::before {
             content: "";
-            width: 10px;
-            height: 10px;
-            border-radius: 999px;
-            background: #87a77f;
-            box-shadow: 0 0 0 6px rgba(135, 167, 127, 0.16);
+            flex: 0 0 auto;
         }
 
         .hero-proof {
-            display: grid;
-            gap: 8px;
-            max-width: 40rem;
-            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .hero-proof span {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            color: var(--brand-blue-soft);
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        .hero-proof span::before {
-            content: "";
-            width: 7px;
-            height: 7px;
-            flex: 0 0 auto;
-            border-radius: 999px;
-            background: rgba(32, 51, 84, 0.34);
-        }
-
-        .hero-card {
-            display: grid;
-            gap: 20px;
-            align-self: stretch;
-            padding: 28px;
-            border-radius: 30px;
+            min-height: 38px;
+            padding: 0 14px;
             border: 1px solid rgba(31, 29, 24, 0.08);
-            background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.90), rgba(255, 252, 247, 0.74));
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.62);
+            color: var(--brand-blue-soft);
+            font-size: 0.95rem;
+            font-weight: 800;
+        }
+
+        main {
+            display: grid;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .section-header {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .section-lead {
+            max-width: 44rem;
+            margin: 0;
+            font-size: 1.04rem;
+        }
+
+        .steps-grid,
+        .pricing-row,
+        .request-grid,
+        .proof-grid,
+        .faq-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .steps-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .step-card,
+        .request-card,
+        .price-card,
+        .proof-note,
+        .faq-item {
+            border: 1px solid rgba(31, 29, 24, 0.08);
+            border-radius: var(--radius-md);
+            background: var(--surface-strong);
             box-shadow: var(--shadow-soft);
+        }
+
+        .step-card,
+        .request-card,
+        .proof-note {
+            padding: 20px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            color: var(--brand-blue);
+            font-weight: 800;
+        }
+
+        .step-card p,
+        .request-card p,
+        .proof-note p {
+            margin: 10px 0 0;
+        }
+
+        .pricing-section {
+            background:
+                linear-gradient(180deg, rgba(255, 252, 247, 0.94), rgba(255, 250, 244, 0.88)),
+                linear-gradient(180deg, rgba(32, 51, 84, 0.06), rgba(32, 51, 84, 0));
+        }
+
+        .pricing-row {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .price-card {
+            display: grid;
+            gap: 18px;
+            align-content: start;
+            padding: 26px;
         }
 
         .membership-chip {
@@ -310,15 +358,10 @@
             border-radius: 999px;
             background: rgba(32, 51, 84, 0.08);
             color: var(--brand-blue);
-            font-size: 0.9rem;
+            font-size: 0.86rem;
             font-weight: 800;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-        }
-
-        .price-block {
-            display: grid;
-            gap: 6px;
         }
 
         .price {
@@ -329,223 +372,31 @@
             color: var(--brand-blue);
         }
 
-        .membership-rules {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 14px;
+        .price span {
+            font-size: 0.42em;
         }
 
-        .rule-card,
-        .signal-card,
-        .request-card,
-        .detail-card,
-        .scope-card,
-        .about-panel,
-        .faq-item,
-        .proof-card {
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(31, 29, 24, 0.08);
-            background: var(--surface-strong);
-            box-shadow: var(--shadow-soft);
-        }
-
-        .rule-card {
-            padding: 16px;
-        }
-
-        .rule-card strong,
-        .scope-card strong,
-        .detail-card strong,
-        .proof-card strong {
-            display: block;
-            margin-bottom: 6px;
-            color: var(--text);
-        }
-
-        .rule-card p,
-        .scope-card p,
-        .detail-card p,
-        .proof-card p {
+        .price-card p {
             margin: 0;
-            color: var(--muted);
         }
 
-        .signal-stack,
-        .details-grid,
-        .scope-grid,
-        .proof-grid,
-        .about-grid,
-        .cta-grid {
-            display: grid;
-            gap: 18px;
-        }
-
-        .signal-stack {
-            gap: 14px;
-        }
-
-        .signal-card {
-            padding: 18px 20px;
-        }
-
-        .signal-card small {
-            display: block;
-            margin-bottom: 6px;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-size: 0.75rem;
-            font-weight: 800;
-        }
-
-        .signal-card strong {
-            display: block;
-            font-size: 1.05rem;
-            color: var(--text);
-        }
-
-        .request-card {
-            padding: 20px 20px 8px;
-            background:
-                linear-gradient(180deg, rgba(243, 238, 230, 0.92), rgba(255, 255, 255, 0.82));
-        }
-
-        .request-card h3 {
-            margin-bottom: 16px;
-        }
-
-        .queue-item {
-            display: grid;
-            gap: 6px;
-            margin-bottom: 14px;
-            padding: 16px;
-            border-radius: 16px;
-            border: 1px solid rgba(31, 29, 24, 0.08);
-            background: rgba(255, 255, 255, 0.76);
-        }
-
-        .queue-item strong {
-            display: block;
-            color: var(--text);
-        }
-
-        .queue-item span {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .queue-item em {
-            font-style: normal;
-            font-size: 0.84rem;
-            font-weight: 800;
-            color: var(--brand-blue-soft);
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        main {
-            display: grid;
-            gap: 28px;
-            margin-top: 28px;
-        }
-
-        .section-header {
-            display: grid;
-            gap: 12px;
-            margin-bottom: 24px;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .step-card,
-        .request-pill,
-        .scope-item,
-        .faq-item {
-            padding: 22px;
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(31, 29, 24, 0.08);
-            background: var(--surface-strong);
-            box-shadow: var(--shadow-soft);
-        }
-
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 46px;
-            height: 46px;
-            margin-bottom: 16px;
-            border-radius: 14px;
-            background: var(--accent-soft);
-            color: var(--brand-blue);
-            font-size: 1rem;
-            font-weight: 800;
-        }
-
-        .step-card p,
-        .scope-item p {
-            margin: 10px 0 0;
-            color: var(--muted);
-        }
-
-        .membership-section {
-            background:
-                linear-gradient(180deg, rgba(255, 252, 247, 0.93), rgba(255, 250, 244, 0.86)),
-                linear-gradient(180deg, rgba(32, 51, 84, 0.06), rgba(32, 51, 84, 0));
-        }
-
-        .details-grid {
-            grid-template-columns: 1fr;
-            gap: 18px;
-            align-items: start;
-        }
-
-        .membership-summary {
-            width: 100%;
-        }
-
-        .detail-card {
-            padding: 22px 24px;
-        }
-
-        .price-card {
-            display: grid;
-            gap: 20px;
-            align-content: start;
-            padding: 28px;
-            border-radius: 26px;
-            border: 1px solid rgba(31, 29, 24, 0.09);
-            background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 252, 247, 0.88));
-            box-shadow: var(--shadow-soft);
-        }
-
-        .price-card ul,
-        .scope-list,
-        .request-grid {
+        .price-card ul {
             margin: 0;
             padding: 0;
             list-style: none;
         }
 
-        .price-card li,
-        .scope-list li {
+        .price-card li {
             position: relative;
             padding-left: 22px;
             color: var(--muted);
         }
 
-        .price-card li + li,
-        .scope-list li + li {
-            margin-top: 12px;
+        .price-card li + li {
+            margin-top: 10px;
         }
 
-        .price-card li::before,
-        .scope-list li::before {
+        .price-card li::before {
             content: "";
             position: absolute;
             top: 0.58em;
@@ -556,158 +407,43 @@
             background: var(--brand-blue);
         }
 
-        .detail-columns {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 16px;
-            margin-top: 18px;
-        }
-
-        .pricing-row {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-            margin-top: 22px;
-        }
-
-        .pricing-row .price-card {
-            width: auto;
-        }
-
         .request-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
         }
 
-        .request-pill strong {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-
-        .request-pill p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.96rem;
-        }
-
-        .scope-grid {
-            grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
-        }
-
-        .scope-card {
-            padding: 24px;
-        }
-
-        .scope-list {
-            margin-top: 16px;
-        }
-
-        .footnote {
-            margin-top: 18px;
-            color: var(--muted);
-            font-size: 0.94rem;
+        .request-card {
+            min-height: 100%;
         }
 
         .proof-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
             align-items: start;
         }
 
-        .proof-card {
-            padding: 24px;
+        .proof-stack {
+            display: grid;
+            gap: 14px;
         }
 
         .testimonial-grid {
             display: grid;
-            gap: 18px;
+            gap: 16px;
         }
 
         .testimonial-shot {
             margin: 0;
-            padding: 14px;
-            border-radius: 22px;
+            padding: 12px;
             border: 1px solid rgba(31, 29, 24, 0.08);
+            border-radius: 20px;
             background: rgba(255, 255, 255, 0.64);
             box-shadow: var(--shadow-soft);
-        }
-
-        .testimonial-grid.dual {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .testimonial-shot img {
             display: block;
             width: 100%;
             height: auto;
-            border-radius: 14px;
-        }
-
-        .about-grid {
-            grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
-            align-items: stretch;
-        }
-
-        .portrait-card {
-            padding: 14px;
-            border-radius: 26px;
-            border: 1px solid rgba(31, 29, 24, 0.08);
-            background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.58));
-            box-shadow: var(--shadow-soft);
-        }
-
-        .portrait-card img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            min-height: 100%;
-            border-radius: 20px;
-            object-fit: cover;
-            object-position: center 16%;
-        }
-
-        .about-panel {
-            padding: 24px;
-        }
-
-        .about-copy {
-            display: grid;
-            gap: 16px;
-        }
-
-        .about-copy p {
-            margin: 0;
-        }
-
-        .about-points {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 14px;
-            margin-top: 22px;
-        }
-
-        .proof-note {
-            padding: 16px;
-            border-radius: 16px;
-            background: rgba(32, 51, 84, 0.06);
-        }
-
-        .proof-note strong {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .proof-note p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.96rem;
-        }
-
-        .faq-list {
-            display: grid;
-            gap: 14px;
+            border-radius: 12px;
         }
 
         .faq-item {
@@ -715,15 +451,15 @@
         }
 
         .faq-item summary {
-            list-style: none;
             display: flex;
+            align-items: center;
             justify-content: space-between;
             gap: 20px;
-            align-items: center;
-            padding: 22px;
+            padding: 20px 22px;
+            color: var(--text);
             cursor: pointer;
             font-weight: 800;
-            color: var(--text);
+            list-style: none;
         }
 
         .faq-item summary::-webkit-details-marker {
@@ -733,9 +469,9 @@
         .faq-item summary::after {
             content: "+";
             flex: 0 0 auto;
-            font-size: 1.4rem;
-            line-height: 1;
             color: var(--brand-blue);
+            font-size: 1.35rem;
+            line-height: 1;
         }
 
         .faq-item[open] summary::after {
@@ -763,14 +499,16 @@
         }
 
         .cta-grid {
+            display: grid;
             grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+            gap: 20px;
             align-items: center;
         }
 
         .cta-card {
             padding: 22px;
-            border-radius: 22px;
             border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
             background: rgba(255, 255, 255, 0.06);
         }
 
@@ -802,92 +540,76 @@
             border-bottom-color: rgba(246, 241, 234, 0.72);
         }
 
-        @media (max-width: 1024px) {
-            .details-grid,
-            .pricing-row,
-            .scope-grid,
-            .proof-grid,
-            .about-grid,
-            .cta-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .steps-grid,
-            .request-grid,
-            .detail-columns,
-            .about-points,
-            .membership-rules,
-            .testimonial-grid.dual {
+        @media (max-width: 1100px) {
+            .request-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        @media (max-width: 760px) {
+        @media (max-width: 900px) {
             .page {
                 width: min(calc(100% - 24px), var(--max-width));
                 padding-top: 14px;
             }
 
+            .hero,
             section {
                 padding: 30px 24px;
                 border-radius: 24px;
             }
 
-            .hero {
-                padding: 30px 24px 28px;
-                border-radius: 24px;
-            }
-
-            h1 {
-                max-width: 100%;
-            }
-
             .steps-grid,
-            .request-grid,
-            .detail-columns,
-            .about-points,
-            .membership-rules,
-            .testimonial-grid.dual {
+            .pricing-row,
+            .proof-grid,
+            .cta-grid {
                 grid-template-columns: 1fr;
             }
+        }
 
-            .hero-actions {
+        @media (max-width: 560px) {
+            h1 {
+                max-width: 100%;
+                font-size: clamp(2.35rem, 10.5vw, 3rem);
+                line-height: 1.02;
+                overflow-wrap: break-word;
+            }
+
+            h2 {
+                max-width: 100%;
+                font-size: clamp(1.9rem, 9vw, 2.45rem);
+            }
+
+            .topline {
+                width: 100%;
+                align-items: flex-start;
+                border-radius: 18px;
+            }
+
+            .hero-actions,
+            .section-actions,
+            .hero-proof {
                 display: grid;
                 grid-template-columns: 1fr;
             }
 
             .button {
                 width: 100%;
+                min-height: auto;
+                padding: 18px 20px;
+                line-height: 1.2;
+                white-space: normal;
             }
 
-            .pill-note {
-                width: auto;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .topline {
-                width: 100%;
-                justify-content: center;
+            .request-grid {
+                grid-template-columns: 1fr;
             }
 
-            .hero-card,
             .price-card,
-            .detail-card,
-            .scope-card,
-            .proof-card,
-            .about-panel,
+            .step-card,
+            .request-card,
+            .proof-note,
             .cta-card {
                 padding: 20px;
-            }
-
-            .step-card,
-            .request-pill,
-            .scope-item,
-            .faq-item summary,
-            .faq-item p {
-                padding-left: 18px;
-                padding-right: 18px;
             }
         }
     </style>
@@ -898,20 +620,20 @@
             <div class="hero-copy">
                 <div class="topline">
                     <span class="topline-dot"></span>
-                    <span>Small roster. Clear scope. Ongoing support.</span>
+                    <span>Founding roster capped at 6 clients. Onboarding up to 2 this month.</span>
                 </div>
-                <div class="eyebrow">AI and Automation Support for Service Business Owners and Operators</div>
-                <h1>Cut waste, tighten workflows, and put AI to work in your business.</h1>
-                <p class="intro">Get ongoing help with the automations, workflow improvements, and AI setup that save time, reduce costly friction, and keep your business moving. I work with a small roster of service business owners and operators, handling requests one at a time.</p>
-                <p class="hero-note"><strong>Competitors are already lowering costs and moving faster with AI.</strong> This offer is built to help you implement practical improvements inside your business, not pile on more tools.</p>
+                <div class="eyebrow">AI Automation Membership</div>
+                <h1>Ongoing AI and automation support for owner-led service teams.</h1>
+                <p class="intro">Send the recurring work your team keeps doing by hand. I turn the best requests into automations, internal tools, AI assistants, and cleaner handoffs that can save hours every week.</p>
+                <p class="hero-note">Competitors are already using AI to lower costs and move faster. This is for teams that want useful implementation, not another pile of tools.</p>
                 <div class="hero-actions">
-                    <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Book a 15-minute fit call</a>
-                    <div class="pill-note">2 of 6 spots open</div>
+                    <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Email Julian about a fit call</a>
+                    <div class="pill-note">Month-to-month after the audit</div>
                 </div>
                 <div class="hero-proof">
-                    <span>Unlimited requests in queue</span>
+                    <span>$1,000 audit first</span>
+                    <span>$3,500/month membership</span>
                     <span>One active request at a time</span>
-                    <span>Updates every 24-48 hours while active</span>
                 </div>
             </div>
         </header>
@@ -920,257 +642,125 @@
             <section>
                 <div class="section-header">
                     <div class="eyebrow">How It Works</div>
-                    <h2>Simple onboarding. Clear path. Practical work.</h2>
-                    <p class="section-lead">This starts with fit, moves through a paid audit, and becomes ongoing support only when the work is clear, useful, and worth continuing.</p>
+                    <h2>Start small. Prove the value. Keep shipping.</h2>
+                    <p class="section-lead">The membership starts with a paid audit so the first month is aimed at real bottlenecks, not vague AI ideas.</p>
                 </div>
 
                 <div class="steps-grid">
                     <article class="step-card">
                         <div class="step-number">01</div>
-                        <h3>Short fit call</h3>
-                        <p>15-20 minutes to see if your business, tech stack, and priorities match the way I work. No hard pitch.</p>
+                        <h3>Fit call</h3>
+                        <p>We confirm your business, tool stack, and request list are a good match. No hard pitch.</p>
                     </article>
                     <article class="step-card">
                         <div class="step-number">02</div>
-                        <h3>AI Opportunity Audit</h3>
-                        <p>A 60-minute working session plus a written report covering your current stack, 3-5 prioritized opportunities, and a practical 90-day roadmap. Delivered within 7 business days.</p>
+                        <h3>$1,000 audit</h3>
+                        <p>You get a 60-minute working session and a written 90-day roadmap with 3-5 high-value opportunities.</p>
                     </article>
                     <article class="step-card">
                         <div class="step-number">03</div>
-                        <h3>Continue into the membership</h3>
-                        <p>If it is a fit, your audit fee credits toward your first month when you join within 30 days. If not, you still leave with a practical roadmap you can use internally.</p>
+                        <h3>Membership</h3>
+                        <p>If it makes sense, the audit credits toward month one. If not, you still leave with a useful roadmap.</p>
                     </article>
                 </div>
             </section>
 
-            <section class="membership-section">
+            <section class="pricing-section">
                 <div class="section-header">
-                    <div class="eyebrow">Membership Details</div>
-                    <h2>Unlimited requests. One active at a time.</h2>
-                    <p class="section-lead">You send requests as they come up. I work through them one by one, shipping updates every 24-48 hours on active work so repetitive tasks get removed, tools get connected, and operations keep getting cleaner over time.</p>
-                </div>
-
-                <div class="details-grid">
-                    <aside class="hero-card membership-summary" aria-label="Membership summary">
-                        <div class="membership-chip">Included in the membership</div>
-                        <div class="membership-rules">
-                            <div class="rule-card">
-                                <strong>Async by default</strong>
-                                <p>Trello, Loom, and shared docs keep work moving without calendar overload.</p>
-                            </div>
-                            <div class="rule-card">
-                                <strong>Business-day pace</strong>
-                                <p>Most active requests move in 2-5 business days, with larger work broken into parts.</p>
-                            </div>
-                            <div class="rule-card">
-                                <strong>Bounded scope</strong>
-                                <p>Big custom builds stay out of the membership unless scoped separately.</p>
-                            </div>
-                        </div>
-
-                        <div class="signal-stack">
-                            <div class="signal-card">
-                                <small>Typical onboarding path</small>
-                                <strong>15-minute fit call -> $1,000 audit -> membership if it makes sense</strong>
-                            </div>
-                            <div class="request-card">
-                                <h3>What requests look like</h3>
-                                <div class="queue-item">
-                                    <em>Active</em>
-                                    <strong>Automate lead intake from forms into CRM + follow-up email</strong>
-                                    <span>Work shipped in pieces with progress updates until complete.</span>
-                                </div>
-                                <div class="queue-item">
-                                    <em>Queued</em>
-                                    <strong>Create internal GPT for proposals and onboarding docs</strong>
-                                    <span>Prompt system, testing, and Loom handoff for the team.</span>
-                                </div>
-                                <div class="queue-item">
-                                    <em>Queued</em>
-                                    <strong>Clean up handoffs between scheduler, payments, and client records</strong>
-                                    <span>Ops cleanup before layering in more automation.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-
-                <div class="detail-columns">
-                    <article class="detail-card">
-                        <strong>How work gets submitted</strong>
-                        <p>Requests come in through Trello, Loom, and shared docs. That keeps everything visible, ordered, and easy to pick up without meetings becoming the product.</p>
-                    </article>
-                    <article class="detail-card">
-                        <strong>How progress stays tangible</strong>
-                        <p>Large requests are broken into working chunks. You see motion every couple of days rather than waiting weeks for a big reveal.</p>
-                    </article>
-                    <article class="detail-card">
-                        <strong>How calls fit in</strong>
-                        <p>The membership is async by default. If you want recurring strategy calls, those are available as a separate add-on so the base offer stays lean.</p>
-                    </article>
-                    <article class="detail-card">
-                        <strong>How slower months work</strong>
-                        <p>Some clients use the membership in focused bursts. When you hit a slower stretch, you can finish the current month and return when you need more.</p>
-                    </article>
+                    <div class="eyebrow">Offer</div>
+                    <h2>Clear pricing, clear scope.</h2>
+                    <p class="section-lead">This is built for steady implementation: one active request at a time, visible progress, and no long-term contract.</p>
                 </div>
 
                 <div class="pricing-row">
-                    <div class="price-card">
-                        <div class="membership-chip">AI Opportunity Audit</div>
-                        <div class="price-block">
-                            <div class="price">$1,000</div>
-                            <p class="muted">A paid working session and written roadmap to identify the highest-value AI and automation opportunities in your business before you commit to ongoing support.</p>
-                        </div>
+                    <article class="price-card">
+                        <div class="membership-chip">Required first step</div>
+                        <div class="price">$1,000</div>
+                        <p>A paid AI Opportunity Audit before the membership. We identify the best places to save time, reduce hand-copying, and clean up the tools you already use.</p>
                         <ul>
                             <li>60-minute working session</li>
+                            <li>Written 90-day roadmap</li>
                             <li>3-5 prioritized opportunities</li>
-                            <li>Practical 90-day roadmap</li>
                             <li>Delivered within 7 business days</li>
-                            <li>Credits toward month one if you continue</li>
+                            <li>Credited toward month one if you continue</li>
                         </ul>
-                        <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Opportunity%20Audit">Book the AI Opportunity Audit</a>
-                    </div>
+                        <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Opportunity%20Audit">Email Julian about the audit</a>
+                    </article>
 
-                    <div class="price-card">
-                        <div class="membership-chip">Month-to-month</div>
-                        <div class="price-block">
-                            <div class="price">$3,500<span style="font-size:0.42em;">/month</span></div>
-                            <p class="muted">A steady way to keep operational improvements moving without another employee, another proposal, or another vague consulting retainer.</p>
-                        </div>
+                    <article class="price-card">
+                        <div class="membership-chip">Ongoing support</div>
+                        <div class="price">$3,500<span>/month</span></div>
+                        <p>Month-to-month implementation support for the automations, AI setup, internal tools, and operational cleanup your team keeps putting off.</p>
                         <ul>
                             <li>Unlimited requests in queue</li>
                             <li>One active request at a time</li>
-                            <li>Clear async communication and progress updates</li>
-                            <li>Optional strategy calls as a paid add-on</li>
-                            <li>No long-term contract</li>
+                            <li>Updates every 24-48 hours while active</li>
+                            <li>Async by default with Loom handoffs</li>
+                            <li>Strategy calls available as an add-on</li>
                         </ul>
-                        <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Book a 15-minute fit call</a>
-                    </div>
+                        <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Email Julian about a fit call</a>
+                    </article>
                 </div>
             </section>
 
             <section>
                 <div class="section-header">
-                    <div class="eyebrow">Common Requests</div>
-                    <h2>The kind of work this membership is built for.</h2>
-                    <p class="section-lead">The strongest requests are specific, practical, and tied to real bottlenecks inside an existing service business.</p>
+                    <div class="eyebrow">Example Requests</div>
+                    <h2>Concrete work, not generic AI advice.</h2>
+                    <p class="section-lead">Good requests remove repeated manual work or give the team a cleaner way to act on business information.</p>
                 </div>
 
                 <div class="request-grid">
-                    <article class="request-pill">
-                        <strong>Automations between the tools you already use</strong>
-                        <p>Move leads, forms, appointments, payments, and records where they need to go without hand-copying or dropped follow-up.</p>
+                    <article class="request-card">
+                        <h3>Draft support replies from inbox scans</h3>
+                        <p>AI reviews incoming messages on a schedule and prepares drafts for your team to approve.</p>
                     </article>
-                    <article class="request-pill">
-                        <strong>Workflow improvements and ops cleanup</strong>
-                        <p>Tighten intake, onboarding, handoffs, approvals, and follow-up so work stops falling through the cracks as you grow.</p>
+                    <article class="request-card">
+                        <h3>Turn winning content into ad scripts</h3>
+                        <p>Analyze your best content and competitor examples, then turn patterns into new video ideas.</p>
                     </article>
-                    <article class="request-pill">
-                        <strong>AI tool setup and implementation</strong>
-                        <p>Set up the right tools, prompts, and workflows without wasting money on software your team will not actually use.</p>
+                    <article class="request-card">
+                        <h3>Cut analysis time from 4 hours to 30 minutes</h3>
+                        <p>Automate a recurring review process so the expert spends time deciding, not compiling.</p>
                     </article>
-                    <article class="request-pill">
-                        <strong>Prompt systems and internal AI assistants</strong>
-                        <p>Build practical helpers for proposals, onboarding, client communication, notes, and internal knowledge capture.</p>
+                    <article class="request-card">
+                        <h3>Build internal dashboards and tools</h3>
+                        <p>Give the team one cleaner place to see status, tasks, records, or client information.</p>
                     </article>
-                    <article class="request-pill">
-                        <strong>Lightweight internal tools and dashboards</strong>
-                        <p>Create simple internal systems that give the team clearer visibility, fewer manual steps, and cleaner day-to-day operations.</p>
+                    <article class="request-card">
+                        <h3>Connect content folders to publishing systems</h3>
+                        <p>Move files, captions, approvals, upload steps, and tracking records with less hand work.</p>
                     </article>
-                    <article class="request-pill">
-                        <strong>Loom walkthroughs and team enablement</strong>
-                        <p>Record clear walkthroughs so your team can actually use what gets built instead of leaving the new system half-adopted.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section>
-                <div class="scope-grid">
-                    <div class="scope-card">
-                        <div class="eyebrow">Who It Is For</div>
-                        <h2>Best for service business owners and operators who want things shipped.</h2>
-                        <ul class="scope-list">
-                            <li>Service business owners and operators dealing with repetitive operational work</li>
-                            <li>Small teams that need practical AI support without a full-time hire</li>
-                            <li>Owners and operators who want execution, not just advice</li>
-                            <li>Businesses with an existing stack that needs cleanup, connection, or better leverage</li>
-                        </ul>
-                    </div>
-
-                    <div class="scope-card">
-                        <div class="eyebrow">Outside the Membership</div>
-                        <h3>Boundaries keep this offer useful.</h3>
-                        <ul class="scope-list">
-                            <li>Full custom SaaS platforms</li>
-                            <li>Large website rebuilds</li>
-                            <li>Emergency production support</li>
-                            <li>Fractional CTO or broad technical leadership</li>
-                            <li>Complex multi-system migrations</li>
-                        </ul>
-                        <p class="footnote">In some cases, these can be handled as separate fixed-scope projects.</p>
-                    </div>
                 </div>
             </section>
 
             <section>
                 <div class="proof-grid">
-                    <div class="proof-card">
+                    <div>
                         <div class="eyebrow">Proof</div>
-                        <h2>Clients are already saving hours each week and cleaning up operational drag.</h2>
-                        <p class="section-lead">The strongest outcomes so far are simple and concrete: less repetitive work, fewer dropped balls, cleaner systems, and stronger foundations for using AI day to day.</p>
-                        <div class="signal-stack">
-                            <div class="signal-card">
-                                <small>Typical outcomes</small>
-                                <strong>Hours saved each week, cleaner handoffs, and less mental drag around repetitive work</strong>
-                            </div>
-                            <div class="signal-card">
-                                <small>Why this format works</small>
-                                <strong>It keeps important improvements moving without turning every operational fix into a new proposal or a new sales cycle</strong>
-                            </div>
+                        <h2>Clients are already getting hours back.</h2>
+                        <p class="section-lead">The early wins are simple: fewer repeated steps, cleaner systems, and less mental drag around work that used to sit in someone's head.</p>
+                        <div class="proof-stack">
+                            <article class="proof-note">
+                                <h3>4 hours to 30 minutes</h3>
+                                <p>A recurring financial analysis process became much faster without removing the human review.</p>
+                            </article>
+                            <article class="proof-note">
+                                <h3>4 hours saved per week</h3>
+                                <p>AI setup and internal workflow support gave one client a stronger foundation for weekly work.</p>
+                            </article>
                         </div>
                     </div>
-
                     <div class="testimonial-grid">
                         <figure class="testimonial-shot">
                             <img src="../testimonials/testimonial-4.png" alt="Client testimonial screenshot saying the work done in 30 minutes saved four hours of work and will save much more time moving forward.">
                         </figure>
                         <figure class="testimonial-shot">
-                            <img src="../testimonials/testimonial-3.png" alt="Client testimonial screenshot saying the first pass is already saving time and clearing mental space.">
-                        </figure>
-                        <figure class="testimonial-shot">
                             <img src="../testimonials/testimonial-5.png" alt="Client testimonial screenshot saying Julian helped set up Claude Code and Claude Cowork, created a strong foundation, and saved four hours of work per week.">
                         </figure>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="about-grid">
-                    <div class="portrait-card">
-                        <img src="../ai/julian-headshot.jpg" alt="Julian Castro seated in front of paintings in his studio.">
-                    </div>
-                    <div class="about-panel">
-                        <div class="eyebrow">About Julian</div>
-                        <h2>A practical operator with technical range.</h2>
-                        <div class="about-copy">
-                            <p class="section-lead">My background is a mix of engineering, project management, creative services, and hands-on systems work. I tend to see both the bottleneck and the practical path forward.</p>
-                            <p>I have worked with businesses across legal, dental, real estate, fitness, apparel, and personal brands, helping with websites, content systems, operations, and the internal workflows that support growth.</p>
-                            <p>More recently, I have been using AI directly in my own businesses to connect tools, organize data, create content workflows, build internal software, and help other operators use modern coding agents to work faster and build smarter.</p>
-                        </div>
-                        <div class="about-points">
-                            <div class="proof-note">
-                                <strong>Operator mindset</strong>
-                                <p>Engineering and project-management roots with a strong instinct for finding the actual bottleneck.</p>
-                            </div>
-                            <div class="proof-note">
-                                <strong>Creative execution</strong>
-                                <p>Years of client work through Joule Studios across digital systems, content, websites, and brand assets.</p>
-                            </div>
-                            <div class="proof-note">
-                                <strong>Hands-on AI builder</strong>
-                                <p>Uses AI to improve real business systems, not just to talk about possibilities.</p>
-                            </div>
-                        </div>
+                        <figure class="testimonial-shot">
+                            <img src="../testimonials/testimonial-3.png" alt="Client testimonial screenshot saying the first pass is already saving time and clearing mental space.">
+                        </figure>
                     </div>
                 </div>
             </section>
@@ -1178,45 +768,29 @@
             <section>
                 <div class="section-header">
                     <div class="eyebrow">FAQ</div>
-                    <h2>The questions most people need answered before this makes sense.</h2>
+                    <h2>The short version before we talk.</h2>
                 </div>
 
                 <div class="faq-list">
                     <details class="faq-item">
-                        <summary>What kinds of requests are the best fit?</summary>
-                        <p>Anything that removes repetitive work, connects tools you already use, or puts AI to work inside your existing operation. The best requests are specific. "Automate X between Y and Z" ships faster than "help us with AI."</p>
+                        <summary>What makes a request a good fit?</summary>
+                        <p>It should remove repeated work, connect tools you already use, or help the team act faster on information. Specific requests move fastest.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>How fast does work get done?</summary>
-                        <p>Most requests are completed within 2-5 business days. Larger requests are broken into smaller pieces, with visible progress and updates every 24-48 hours while active.</p>
+                        <summary>How fast do requests move?</summary>
+                        <p>Most active requests move in 2-5 business days. Larger work is broken into smaller pieces with updates every 24-48 hours while active.</p>
                     </details>
                     <details class="faq-item">
                         <summary>Do I need the audit first?</summary>
-                        <p>For most new clients, yes. It is how I get into the weeds of your business and build a real plan. In straightforward cases, I may waive it and start directly in the membership.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How do calls work?</summary>
-                        <p>The membership is async by default. If you want regular strategy calls, they are available as a paid add-on. Most clients do well with async updates and Loom walkthroughs.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>What if I only have one or two requests?</summary>
-                        <p>That is fine. Many clients use the membership in focused bursts. If you hit a slower stretch, you can finish the current month and come back when you need more.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>How do larger requests get handled?</summary>
-                        <p>Broken into chunks and shipped piece by piece. You will see progress every couple of days until the request is complete. If something turns into a much larger build, I will tell you and we can scope it separately.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>What tools do you work with?</summary>
-                        <p>Most modern stacks - Make, n8n, Zapier, OpenAI and Anthropic APIs, Airtable, Notion, Webflow, common CRMs, and most SaaS tools with solid APIs. If your stack is unusual or especially complex, we will talk through whether it belongs in the membership or as a separate project.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>What if I am not technical?</summary>
-                        <p>You do not need to be. Part of my job is translating between your business and the tech. Loom walkthroughs are included so your team can actually use what gets built.</p>
+                        <p>Yes for most new clients. It creates the roadmap and protects both of us from starting a membership around vague priorities.</p>
                     </details>
                     <details class="faq-item">
                         <summary>What is outside the membership?</summary>
-                        <p>Big custom builds and ongoing technical leadership usually are not a fit for this format, though some can be handled as separate fixed-scope projects when the scope is clear and the timing works.</p>
+                        <p>Large SaaS builds, emergency production support, broad technical leadership, and complex migrations are separate projects if they make sense at all.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What if I am not technical?</summary>
+                        <p>That is fine. You bring the business context. I translate the work into tools, automations, prompts, docs, and Loom handoffs your team can use.</p>
                     </details>
                 </div>
             </section>
@@ -1224,18 +798,18 @@
             <section class="cta-panel">
                 <div class="cta-grid">
                     <div>
-                        <div class="eyebrow" style="color:rgba(246,241,234,0.68);">Ready</div>
-                        <h2>See if the membership is the right fit for your business.</h2>
-                        <p class="section-lead">If you want ongoing help reducing repetitive work, tightening workflows, and putting AI to work inside your business, start with a short fit call.</p>
-                        <div class="hero-actions">
-                            <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Book a 15-minute fit call</a>
+                        <div class="eyebrow" style="color:rgba(246,241,234,0.68);">Next Step</div>
+                        <h2>See if this belongs in your business.</h2>
+                        <p class="section-lead">If your team has repetitive work that should not still be manual, email me about a fit call. We will start with the audit only if the match is clear.</p>
+                        <div class="section-actions">
+                            <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Email Julian about a fit call</a>
                         </div>
                     </div>
                     <div class="cta-card">
-                        <strong>Good fit</strong>
-                        <p>You already have a business, a real workflow, and a list of operational friction you want removed.</p>
-                        <strong style="margin-top:18px;">Less ideal fit</strong>
-                        <p>You want a giant custom platform, an emergency engineer on call, or a broad technical cofounder replacement.</p>
+                        <strong>Best fit</strong>
+                        <p>Owner-led service teams with real customers, repeated admin, messy handoffs, and a clear desire to save time.</p>
+                        <strong style="margin-top:18px;">Less ideal</strong>
+                        <p>Idea-stage businesses, giant platform builds, or teams looking for an emergency engineer on call.</p>
                     </div>
                 </div>
             </section>
