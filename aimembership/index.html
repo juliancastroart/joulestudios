@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julian Castro | AI Automation Membership</title>
-    <meta name="description" content="Ongoing AI and automation support for owner-led service teams. Start with a $1,000 audit, then continue month to month for implementation support.">
+    <meta name="description" content="Ongoing AI and automation support for owner-led service teams. Start with an AI Opportunity Assessment, then continue into subscription support for expert implementation and new requests.">
     <link rel="canonical" href="https://www.joulestudios.com/aimembership/">
     <meta name="theme-color" content="#203354">
     <meta property="og:type" content="website">
@@ -122,17 +122,12 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 18px;
-            padding: 10px 14px;
-            border: 1px solid rgba(31, 29, 24, 0.08);
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.64);
             color: var(--brand-blue);
             font-size: 0.94rem;
             font-weight: 800;
         }
 
-        .topline-dot,
-        .pill-note::before {
+        .topline-dot {
             width: 10px;
             height: 10px;
             border-radius: 999px;
@@ -151,7 +146,7 @@
         }
 
         h1 {
-            max-width: 13.5ch;
+            max-width: 17ch;
             font-size: clamp(3rem, 6.2vw, 5.25rem);
         }
 
@@ -170,8 +165,7 @@
         .muted,
         .faq-item p,
         .request-card p,
-        .step-card p,
-        .price-card p,
+        .offer-card p,
         .proof-note p {
             color: var(--muted);
         }
@@ -180,13 +174,6 @@
             max-width: 48rem;
             margin: 20px 0 0;
             font-size: clamp(1.08rem, 1.75vw, 1.28rem);
-        }
-
-        .hero-note {
-            max-width: 46rem;
-            margin: 14px 0 0;
-            color: var(--brand-blue-soft);
-            font-weight: 700;
         }
 
         .hero-actions,
@@ -232,39 +219,6 @@
             outline-offset: 2px;
         }
 
-        .pill-note {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--brand-blue-soft);
-            font-weight: 800;
-        }
-
-        .pill-note::before {
-            content: "";
-            flex: 0 0 auto;
-        }
-
-        .hero-proof {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .hero-proof span {
-            display: inline-flex;
-            align-items: center;
-            min-height: 38px;
-            padding: 0 14px;
-            border: 1px solid rgba(31, 29, 24, 0.08);
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.62);
-            color: var(--brand-blue-soft);
-            font-size: 0.95rem;
-            font-weight: 800;
-        }
-
         main {
             display: grid;
             gap: 24px;
@@ -283,8 +237,7 @@
             font-size: 1.04rem;
         }
 
-        .steps-grid,
-        .pricing-row,
+        .offer-row,
         .request-grid,
         .proof-grid,
         .faq-list {
@@ -292,13 +245,8 @@
             gap: 16px;
         }
 
-        .steps-grid {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .step-card,
         .request-card,
-        .price-card,
+        .offer-card,
         .proof-note,
         .faq-item {
             border: 1px solid rgba(31, 29, 24, 0.08);
@@ -307,42 +255,27 @@
             box-shadow: var(--shadow-soft);
         }
 
-        .step-card,
         .request-card,
         .proof-note {
             padding: 20px;
         }
 
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 42px;
-            height: 42px;
-            margin-bottom: 16px;
-            border-radius: 12px;
-            background: var(--accent-soft);
-            color: var(--brand-blue);
-            font-weight: 800;
-        }
-
-        .step-card p,
         .request-card p,
         .proof-note p {
             margin: 10px 0 0;
         }
 
-        .pricing-section {
+        .offer-section {
             background:
                 linear-gradient(180deg, rgba(255, 252, 247, 0.94), rgba(255, 250, 244, 0.88)),
                 linear-gradient(180deg, rgba(32, 51, 84, 0.06), rgba(32, 51, 84, 0));
         }
 
-        .pricing-row {
+        .offer-row {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .price-card {
+        .offer-card {
             display: grid;
             gap: 18px;
             align-content: start;
@@ -364,39 +297,35 @@
             text-transform: uppercase;
         }
 
-        .price {
+        .offer-title {
             font-family: "Fraunces", serif;
-            font-size: clamp(2.8rem, 5vw, 4rem);
+            font-size: clamp(2rem, 3.8vw, 3.15rem);
             line-height: 0.94;
             letter-spacing: -0.04em;
             color: var(--brand-blue);
         }
 
-        .price span {
-            font-size: 0.42em;
-        }
-
-        .price-card p {
+        .offer-card p {
             margin: 0;
         }
 
-        .price-card ul {
+        .offer-card ul {
             margin: 0;
             padding: 0;
             list-style: none;
         }
 
-        .price-card li {
+        .offer-card li {
             position: relative;
             padding-left: 22px;
             color: var(--muted);
         }
 
-        .price-card li + li {
+        .offer-card li + li {
             margin-top: 10px;
         }
 
-        .price-card li::before {
+        .offer-card li::before {
             content: "";
             position: absolute;
             top: 0.58em;
@@ -420,9 +349,14 @@
             align-items: start;
         }
 
+        .proof-copy .section-lead {
+            margin-top: 16px;
+        }
+
         .proof-stack {
             display: grid;
             gap: 14px;
+            margin-top: 22px;
         }
 
         .testimonial-grid {
@@ -558,8 +492,7 @@
                 border-radius: 24px;
             }
 
-            .steps-grid,
-            .pricing-row,
+            .offer-row,
             .proof-grid,
             .cta-grid {
                 grid-template-columns: 1fr;
@@ -580,14 +513,11 @@
             }
 
             .topline {
-                width: 100%;
                 align-items: flex-start;
-                border-radius: 18px;
             }
 
             .hero-actions,
-            .section-actions,
-            .hero-proof {
+            .section-actions {
                 display: grid;
                 grid-template-columns: 1fr;
             }
@@ -604,8 +534,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .price-card,
-            .step-card,
+            .offer-card,
             .request-card,
             .proof-note,
             .cta-card {
@@ -622,91 +551,54 @@
                     <span class="topline-dot"></span>
                     <span>Founding roster capped at 6 clients. Onboarding up to 2 this month.</span>
                 </div>
-                <div class="eyebrow">AI Automation Membership</div>
-                <h1>Ongoing AI and automation support for owner-led service teams.</h1>
-                <p class="intro">Send the recurring work your team keeps doing by hand. I turn the best requests into automations, internal tools, AI assistants, and cleaner handoffs that can save hours every week.</p>
-                <p class="hero-note">Competitors are already using AI to lower costs and move faster. This is for teams that want useful implementation, not another pile of tools.</p>
+                <h1>AI should be doing work for you. Are you still just chatting with&nbsp;it?</h1>
+                <p class="intro">If your team only uses AI when someone opens a chat window, you are already behind. AI can scan, draft, analyze, route, update, and trigger work across your business. Start with an AI Opportunity Assessment, then continue into subscription support to remove bottlenecks, save hours, and keep your systems improving as the tools evolve.</p>
                 <div class="hero-actions">
-                    <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Email Julian about a fit call</a>
-                    <div class="pill-note">Month-to-month after the audit</div>
-                </div>
-                <div class="hero-proof">
-                    <span>$1,000 audit first</span>
-                    <span>$3,500/month membership</span>
-                    <span>One active request at a time</span>
+                    <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Opportunity%20Assessment">Start with the assessment</a>
                 </div>
             </div>
         </header>
 
         <main>
-            <section>
+            <section class="offer-section">
                 <div class="section-header">
-                    <div class="eyebrow">How It Works</div>
-                    <h2>Start small. Prove the value. Keep shipping.</h2>
-                    <p class="section-lead">The membership starts with a paid audit so the first month is aimed at real bottlenecks, not vague AI ideas.</p>
+                    <h2>How to Get Started</h2>
                 </div>
 
-                <div class="steps-grid">
-                    <article class="step-card">
-                        <div class="step-number">01</div>
-                        <h3>Fit call</h3>
-                        <p>We confirm your business, tool stack, and request list are a good match. No hard pitch.</p>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-number">02</div>
-                        <h3>$1,000 audit</h3>
-                        <p>You get a 60-minute working session and a written 90-day roadmap with 3-5 high-value opportunities.</p>
-                    </article>
-                    <article class="step-card">
-                        <div class="step-number">03</div>
-                        <h3>Membership</h3>
-                        <p>If it makes sense, the audit credits toward month one. If not, you still leave with a useful roadmap.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="pricing-section">
-                <div class="section-header">
-                    <div class="eyebrow">Offer</div>
-                    <h2>Clear pricing, clear scope.</h2>
-                    <p class="section-lead">This is built for steady implementation: one active request at a time, visible progress, and no long-term contract.</p>
-                </div>
-
-                <div class="pricing-row">
-                    <article class="price-card">
-                        <div class="membership-chip">Required first step</div>
-                        <div class="price">$1,000</div>
-                        <p>A paid AI Opportunity Audit before the membership. We identify the best places to save time, reduce hand-copying, and clean up the tools you already use.</p>
+                <div class="offer-row">
+                    <article class="offer-card">
+                        <div class="membership-chip">Step 1</div>
+                        <div class="offer-title">AI Opportunity Assessment</div>
+                        <p>A focused assessment before the subscription. We identify the best places to save time, reduce hand-copying, and clean up the tools you already use.</p>
                         <ul>
                             <li>60-minute working session</li>
                             <li>Written 90-day roadmap</li>
                             <li>3-5 prioritized opportunities</li>
                             <li>Delivered within 7 business days</li>
-                            <li>Credited toward month one if you continue</li>
+                            <li>Recommendations you can use yourself</li>
                         </ul>
-                        <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Opportunity%20Audit">Email Julian about the audit</a>
+                        <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Opportunity%20Assessment">Start with the assessment</a>
                     </article>
 
-                    <article class="price-card">
-                        <div class="membership-chip">Ongoing support</div>
-                        <div class="price">$3,500<span>/month</span></div>
-                        <p>Month-to-month implementation support for the automations, AI setup, internal tools, and operational cleanup your team keeps putting off.</p>
+                    <article class="offer-card">
+                        <div class="membership-chip">Step 2</div>
+                        <div class="offer-title">Ongoing Implementation</div>
+                        <p>Expert implementation support for the roadmap, new requests, maintenance, and performance upgrades as AI tools and software evolve.</p>
                         <ul>
-                            <li>Unlimited requests in queue</li>
+                            <li>As many requests as you like</li>
                             <li>One active request at a time</li>
                             <li>Updates every 24-48 hours while active</li>
                             <li>Async by default with Loom handoffs</li>
-                            <li>Strategy calls available as an add-on</li>
+                            <li>Systems kept current over time</li>
                         </ul>
-                        <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Email Julian about a fit call</a>
+                        <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Opportunity%20Assessment">Start with the assessment</a>
                     </article>
                 </div>
             </section>
 
             <section>
                 <div class="section-header">
-                    <div class="eyebrow">Example Requests</div>
-                    <h2>Concrete work, not generic AI advice.</h2>
+                    <h2>Example Improvements</h2>
                     <p class="section-lead">Good requests remove repeated manual work or give the team a cleaner way to act on business information.</p>
                 </div>
 
@@ -736,8 +628,7 @@
 
             <section>
                 <div class="proof-grid">
-                    <div>
-                        <div class="eyebrow">Proof</div>
+                    <div class="proof-copy">
                         <h2>Clients are already getting hours back.</h2>
                         <p class="section-lead">The early wins are simple: fewer repeated steps, cleaner systems, and less mental drag around work that used to sit in someone's head.</p>
                         <div class="proof-stack">
@@ -767,30 +658,45 @@
 
             <section>
                 <div class="section-header">
-                    <div class="eyebrow">FAQ</div>
-                    <h2>The short version before we talk.</h2>
+                    <h2>FAQ</h2>
                 </div>
 
                 <div class="faq-list">
                     <details class="faq-item">
-                        <summary>What makes a request a good fit?</summary>
-                        <p>It should remove repeated work, connect tools you already use, or help the team act faster on information. Specific requests move fastest.</p>
+                        <summary>Why does the assessment come first?</summary>
+                        <p>The assessment keeps the subscription focused on work that is actually worth doing. Before we start building automations or AI systems, I look at your current tools, repeated tasks, handoffs, and bottlenecks so we can identify the highest-leverage opportunities first.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>How fast do requests move?</summary>
-                        <p>Most active requests move in 2-5 business days. Larger work is broken into smaller pieces with updates every 24-48 hours while active.</p>
+                        <summary>What happens during the assessment?</summary>
+                        <p>We'll review where your team is spending unnecessary time, where work is being copied between tools, where follow-up or handoffs break down, and where AI or automation could realistically help. Afterward, you get a written roadmap with prioritized opportunities and recommended next steps.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>Do I need the audit first?</summary>
-                        <p>Yes for most new clients. It creates the roadmap and protects both of us from starting a membership around vague priorities.</p>
+                        <summary>What happens after the assessment?</summary>
+                        <p>You'll leave with a roadmap and recommendations you can use on your own. From there, you can continue into the subscription and work with me directly to implement the roadmap, handle the technical setup, improve the systems over time, and take on new requests as they come up.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>What is outside the membership?</summary>
-                        <p>Large SaaS builds, emergency production support, broad technical leadership, and complex migrations are separate projects if they make sense at all.</p>
+                        <summary>Can I send as many requests as I want?</summary>
+                        <p>Yes. Once you're in the subscription, you can send as many requests as you like. I work through them one at a time so the work stays focused, finished, and useful.</p>
                     </details>
                     <details class="faq-item">
-                        <summary>What if I am not technical?</summary>
-                        <p>That is fine. You bring the business context. I translate the work into tools, automations, prompts, docs, and Loom handoffs your team can use.</p>
+                        <summary>What counts as a request?</summary>
+                        <p>A request is a specific improvement you want handled, such as automating lead intake, drafting customer support replies from inbox scans, building an internal dashboard, setting up an AI assistant, cleaning up a handoff, or connecting tools your team already uses. The possibilities are endless... try me.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How fast are requests completed?</summary>
+                        <p>Small requests may move quickly. Larger requests are broken into smaller pieces, with progress updates every 24-48 hours while active. The goal is steady visible progress, not disappearing for weeks and returning with a giant reveal.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do you help keep systems updated over time?</summary>
+                        <p>Yes. AI tools, automation platforms, and software features are changing quickly. Part of the ongoing support is keeping your systems current, improving performance, replacing outdated pieces when better options emerge, and making sure what we build keeps working as your tools evolve.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What kinds of requests are too big for the subscription?</summary>
+                        <p>Full SaaS products, major website rebuilds, complex migrations, emergency production support, or broad technical leadership usually sit outside the subscription. If something is too large, I'll tell you and we can decide whether it should become a separate project.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do I need to be technical?</summary>
+                        <p>No. You bring the business context: what is slow, repetitive, messy, or expensive. I translate that into tools, automations, prompts, docs, workflows, and Loom walkthroughs your team can actually use.</p>
                     </details>
                 </div>
             </section>
@@ -799,10 +705,10 @@
                 <div class="cta-grid">
                     <div>
                         <div class="eyebrow" style="color:rgba(246,241,234,0.68);">Next Step</div>
-                        <h2>See if this belongs in your business.</h2>
-                        <p class="section-lead">If your team has repetitive work that should not still be manual, email me about a fit call. We will start with the audit only if the match is clear.</p>
+                        <h2>Start with the assessment.</h2>
+                        <p class="section-lead">If your team has repetitive work that should not still be manual, start with the AI Opportunity Assessment. You'll get a roadmap you can use yourself, plus the option to continue into subscription support.</p>
                         <div class="section-actions">
-                            <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Membership%20Fit%20Call">Email Julian about a fit call</a>
+                            <a class="button" href="mailto:julian@joulestudios.com?subject=AI%20Opportunity%20Assessment">Start with the assessment</a>
                         </div>
                     </div>
                     <div class="cta-card">
