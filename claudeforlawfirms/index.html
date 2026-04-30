@@ -6,6 +6,9 @@
     <title>Claude Workflow Workshop for Lawyers | Joule Studios</title>
     <meta name="description" content="A 12-seat Claude workflow workshop for law firm owners and operators, including two private calls and a live in-person session near downtown Fort Lauderdale.">
     <link rel="canonical" href="https://www.joulestudios.com/claudeforlawfirms/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#fbfaf7">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Claude Workflow Workshop for Lawyers">
@@ -526,14 +529,15 @@
 
         .about {
             display: grid;
-            grid-template-columns: 124px minmax(0, 1fr);
-            gap: 22px;
-            align-items: center;
+            grid-template-columns: minmax(170px, 210px) minmax(0, 1fr);
+            gap: 30px;
+            align-items: start;
         }
 
-        .about img {
-            width: 124px;
-            aspect-ratio: 1;
+        .about-photo {
+            width: 100%;
+            max-width: 210px;
+            aspect-ratio: 4 / 5;
             border: 1px solid var(--line);
             border-radius: var(--radius);
             object-fit: cover;
@@ -543,6 +547,36 @@
         .about p {
             margin: 12px 0 0;
             color: var(--muted);
+        }
+
+        .about-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .about-proof {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 14px;
+            background: var(--surface);
+        }
+
+        .about-proof:last-child {
+            grid-column: 1 / -1;
+        }
+
+        .about-proof strong {
+            display: block;
+            color: var(--ink);
+            font-weight: 800;
+        }
+
+        .about-proof p {
+            margin-top: 6px;
+            font-size: 0.9rem;
+            line-height: 1.45;
         }
 
         .final-box {
@@ -634,8 +668,13 @@
             }
 
             .fit-grid,
-            .about {
+            .about,
+            .about-proof-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .about-proof:last-child {
+                grid-column: auto;
             }
 
             .actions {
@@ -676,7 +715,7 @@
                 <img src="Event%20image%20v1.jpg" alt="Julian Castro leading a Claude workflow workshop">
             </div>
 
-            <p class="eyebrow">Claude for law firm workflows</p>
+            <p class="eyebrow">Claude for law firms workshop</p>
             <h1>Use Claude to automate real work in your firm.</h1>
             <p class="lead">A hands-on implementation workshop for law firm owners, managing partners, and operators. Your seat includes two private calls and the live event, so the work is specific to your firm.</p>
 
@@ -778,9 +817,9 @@
                         <summary>Do I need to know how to code?</summary>
                         <p>No. This workshop is for lawyers, owners, and operators, not developers. If you can explain how your firm works, we can turn that knowledge into useful Claude instructions and workflows.</p>
                     </details>
-                    <details open>
+                    <details>
                         <summary>Do I need a Claude account?</summary>
-                        <p>Yes. Please create a Claude account before the event and bring the login with you. After you reserve your seat, I will send a short prep note so you arrive ready to build.</p>
+                        <p>Yes. Please create a Claude account before the event and subscribe to Claude Pro or higher. Claude Pro is currently $20 per month when billed monthly. Bring your login and laptop so we can build in your own account. After you reserve your seat, I will send a short setup note so you arrive ready to build.</p>
                     </details>
                     <details>
                         <summary>What if I already use ChatGPT, Gemini, Copilot, or another AI tool?</summary>
@@ -811,11 +850,26 @@
 
             <section>
                 <div class="about">
-                    <img src="../ai/julian-headshot.jpg" alt="Julian Castro">
-                    <div>
+                    <img class="about-photo" src="../ai/julian-headshot.jpg" alt="Julian Castro">
+                    <div class="about-copy">
                         <p class="kicker">About Julian</p>
                         <h2>Practical AI systems, built close to the work.</h2>
-                        <p>I am Julian Castro, founder of Joule Studios in Fort Lauderdale. My background combines mechanical engineering, business, marketing, and hands-on creative work for service businesses, including law firms. I have helped firms and founders clarify their message, improve their websites, and turn complex work into practical systems people can actually use. This workshop brings that same operator's lens to Claude: find the repeated work, turn it into a workflow, and keep attorney judgment where it belongs.</p>
+                        <p>I am Julian Castro, founder of Joule Studios in Fort Lauderdale. My background combines mechanical engineering, business, marketing, and hands-on creative work for service businesses, including past website, photo, video, and marketing work for law firms.</p>
+                        <p>For the last couple years, I have been building with AI every week: internal tools, automations, Claude workflows, websites, and an App Store app. My work now is simple: help businesses find repeated manual work, turn it into practical AI systems, and save time and money without removing the human judgment that matters.</p>
+                        <div class="about-proof-grid" aria-label="AI implementation proof">
+                            <article class="about-proof">
+                                <strong>4 hours to about 30 minutes</strong>
+                                <p>Client feedback from an AI and automation project said a recurring analysis process became dramatically faster while keeping human review in place.</p>
+                            </article>
+                            <article class="about-proof">
+                                <strong>About 4 hours saved per week</strong>
+                                <p>Another client credited AI setup and workflow support with creating a stronger operating foundation for weekly work.</p>
+                            </article>
+                            <article class="about-proof">
+                                <strong>Builder, not just presenter</strong>
+                                <p>I use AI to ship real tools, tighten operations, and turn messy workflows into systems people can actually use.</p>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </section>
