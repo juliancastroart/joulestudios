@@ -300,8 +300,7 @@
             align-items: start;
         }
 
-        .ticket-name,
-        .total strong {
+        .ticket-name {
             color: var(--ink);
             font-weight: 800;
         }
@@ -339,18 +338,9 @@
             font-size: 0.78rem;
         }
 
-        .total {
-            display: flex;
-            justify-content: space-between;
-            gap: 16px;
-            margin: 22px 0;
-            padding-top: 22px;
-            border-top: 1px solid var(--line);
-            color: var(--muted);
-        }
-
         .ticket-card .button {
             width: 100%;
+            margin-top: 22px;
         }
 
         .guarantee-line {
@@ -854,10 +844,6 @@
                     <p class="seat-line">12 seats total</p>
                     <div class="progress" aria-hidden="true"><span></span></div>
                     <p class="progress-note">Prep call, live event, and follow-up included</p>
-                </div>
-                <div class="total">
-                    <span>Total due</span>
-                    <strong>$1,200</strong>
                 </div>
                 <a class="button" href="https://book.stripe.com/5kQfZhdjtca52UK5FF6Na01">Reserve my seat</a>
                 <p class="guarantee-line">100% money-back guarantee</p>
