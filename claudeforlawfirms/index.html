@@ -109,18 +109,88 @@
         .hero-image {
             position: relative;
             overflow: hidden;
+            aspect-ratio: 16 / 9;
             border: 1px solid var(--line);
             border-radius: var(--radius);
             background: var(--blue-deep);
         }
 
         .hero-image img {
-            display: block;
+            position: absolute;
+            inset: 0;
             width: 100%;
-            height: auto;
-            max-height: 430px;
+            height: 100%;
             object-fit: cover;
-            object-position: center 18%;
+            object-position: center center;
+        }
+
+        .hero-video-trigger {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-flex;
+            min-height: 62px;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            border-radius: var(--radius);
+            padding: 0 22px;
+            background: rgba(21, 25, 34, 0.82);
+            color: #ffffff;
+            font: inherit;
+            font-size: 1rem;
+            font-weight: 800;
+            box-shadow: 0 12px 28px rgba(21, 25, 34, 0.28);
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            transition: transform 160ms ease, background 160ms ease;
+            white-space: nowrap;
+            z-index: 2;
+        }
+
+        .hero-video-trigger:hover,
+        .hero-video-trigger:focus-visible {
+            transform: translate(-50%, calc(-50% - 1px));
+            background: rgba(21, 25, 34, 0.92);
+        }
+
+        .play-mark {
+            display: inline-grid;
+            width: 38px;
+            aspect-ratio: 1;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--yellow);
+            color: var(--ink);
+            font-size: 0.92rem;
+            line-height: 1;
+        }
+
+        .hero-video-frame {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+        }
+
+        .hero-video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .hero-image.is-playing img,
+        .hero-image.is-playing .hero-video-trigger {
+            display: none;
+        }
+
+        .hero-image.is-playing .hero-video-frame {
+            display: block;
         }
 
         .eyebrow {
@@ -651,8 +721,10 @@
                 gap: 24px;
             }
 
-            .hero-image img {
-                max-height: 300px;
+            .hero-video-trigger {
+                min-height: 54px;
+                padding: 0 14px;
+                font-size: 0.9rem;
             }
 
             h1 {
@@ -711,13 +783,18 @@
 
     <div class="page">
         <main class="main-column">
-            <div class="hero-image">
-                <img src="Event%20image%20v1.jpg" alt="Julian Castro leading a Claude workflow workshop">
+            <div class="hero-image" data-video-hero>
+                <img src="Event%20image%20v2.jpg" alt="Julian Castro introducing Claude for law firms">
+                <button class="hero-video-trigger" type="button" data-video-open aria-controls="overview-video-frame">
+                    <span class="play-mark" aria-hidden="true">&#9658;</span>
+                    Watch 4-minute overview
+                </button>
+                <div class="hero-video-frame" id="overview-video-frame" aria-label="Claude for law firms video overview"></div>
             </div>
 
             <p class="eyebrow">Claude for law firms workshop</p>
             <h1>Use Claude to automate real work in your firm.</h1>
-            <p class="lead">A hands-on implementation workshop for law firm owners, managing partners, and operators. Your seat includes two private calls and the live event, so the work is specific to your firm.</p>
+            <p class="lead">Build one Claude workflow your firm can actually use: less manual intake, faster drafting support, cleaner client follow-up, and fewer repeated questions landing on your desk.</p>
 
             <ul class="event-meta" aria-label="Event details">
                 <li><strong>Thursday, May 14, 2026</strong> - 9:00 AM-12:00 PM</li>
@@ -735,7 +812,7 @@
             </div>
 
             <div class="actions">
-                <a class="button" href="https://book.stripe.com/5kQfZhdjtca52UK5FF6Na01">Reserve your seat - $1,200</a>
+                <a class="button" href="https://book.stripe.com/5kQfZhdjtca52UK5FF6Na01">Reserve your seat</a>
                 <a class="button secondary" href="#details">See what is included</a>
             </div>
             <p class="fine-print"><strong>100% money-back guarantee.</strong> Attend the full session. If it was not worth it, get a full refund.</p>
@@ -745,10 +822,10 @@
                 <p class="body-copy">Most lawyers are either not using AI yet, or they are stuck using it only as a chat function. The next step is turning Claude into a repeatable workflow the firm can use: intake follow-up, drafting support, client communication, firm checklists, internal SOPs, or the first version of a Claude Skill your team can reuse.</p>
                 <p class="body-copy"><strong>The goal is simple:</strong> use the prep call to pick the right target, use the live session to build the first useful version, and use the follow-up call to tighten it after you use it in the firm.</p>
                 <ul class="bullet-list">
-                    <li><strong>Automate intake and follow-up:</strong> draft lead responses, summarize intake notes, prepare next steps, or write handoff instructions for your team.</li>
-                    <li><strong>Save time on admin work:</strong> reduce repeated tasks so your team can handle more cases and create more revenue capacity without adding more chaos.</li>
-                    <li><strong>Improve repeated drafting work:</strong> turn common patterns into reusable instructions that keep your firm voice, requirements, and review steps intact.</li>
-                    <li><strong>Build firm knowledge into Claude:</strong> create a practical starting point for SOPs, client communication standards, matter checklists, or decision trees.</li>
+                    <li><strong>Automate intake and follow-up:</strong> qualify new leads, summarize consult notes, draft next-step emails, and prepare handoff notes so no inquiry sits untouched.</li>
+                    <li><strong>Save time on admin work:</strong> turn repeated status updates, scheduling replies, document requests, and internal questions into workflows your team can run without waiting on you.</li>
+                    <li><strong>Improve repeated drafting work:</strong> build Claude instructions for common petitions, demand-letter sections, client update drafts, discovery summaries, or first-pass document outlines while keeping attorney review in place.</li>
+                    <li><strong>Build firm knowledge into Claude:</strong> capture your intake criteria, matter checklists, tone rules, SOPs, and client communication standards so your team stops asking the same questions every week.</li>
                 </ul>
             </section>
 
@@ -814,6 +891,28 @@
                 <p class="section-lead">A few practical details so you know what you are buying.</p>
                 <div class="faq">
                     <details>
+                        <summary>Will this work for my practice area?</summary>
+                        <p>Yes. The workshop is built around your workflow, not your practice area. PI, family, immigration, criminal defense, estate, business: the underlying mechanics are the same. You have intake to process, documents to draft, clients to update, and internal questions your team asks you on repeat. Claude Skills can help with all of it.</p>
+                        <p>In the prep call, we pick one workflow specific to your firm and build around that. So whether you are qualifying car accident leads, drafting petitions, or generating client status updates, you leave with something built for your practice, not a generic template.</p>
+                    </details>
+                    <details>
+                        <summary>What will I actually leave with?</summary>
+                        <p>Three things, all usable Friday morning:</p>
+                        <ol class="included-list">
+                            <li><strong>A working Claude Skill, configured for your firm.</strong> Not a demo, not a template. A tool that runs against your actual workflow. We pick the workflow in the prep call and build it together in the room.</li>
+                            <li><strong>The framework to build more.</strong> Once you have built one Skill, you can build a Skill for intake, drafting, follow-ups, internal SOPs, client communication, or another repeated workflow. You leave knowing how the pieces fit together, not just having watched.</li>
+                            <li><strong>Documentation you can hand to your team.</strong> A short written guide for the workflow we built, so the people in your firm who did not attend can use it without you re-explaining it.</li>
+                        </ol>
+                        <p>The follow-up call two weeks later is to make sure all three are actually working in your firm after the workshop.</p>
+                    </details>
+                    <details>
+                        <summary>Why should I trust you with my firm's workflows?</summary>
+                        <p>Fair question. I am not a lawyer and I have not run a law firm.</p>
+                        <p>What I have done is spend the last couple of years building AI systems that run inside service businesses: internal tools, automations, Claude workflows, and processes that take repetitive work off operators' plates. Most recently, I helped clients cut a recurring analysis process from four hours to about thirty minutes by building the right Skill around it, and I have automated customer support emails to save hours of work per week. That is the same work we will do in the room, applied to your firm.</p>
+                        <p>You are also protected on both sides. The 100% money-back guarantee means if you sit through the full session and feel it was not worth what you paid, I refund you in full. No forms, no hoops. And nothing leaves your Claude account. We work entirely within your own login, so your firm's data stays where it should.</p>
+                        <p>If you want to talk before reserving, email me at <a href="mailto:julian@joulestudios.com">julian@joulestudios.com</a> and we will get on a 15-minute call.</p>
+                    </details>
+                    <details>
                         <summary>Do I need to know how to code?</summary>
                         <p>No. This workshop is for lawyers, owners, and operators, not developers. If you can explain how your firm works, we can turn that knowledge into useful Claude instructions and workflows.</p>
                     </details>
@@ -832,10 +931,6 @@
                     <details>
                         <summary>What about client confidentiality?</summary>
                         <p>Do not bring privileged or confidential client materials into the room. We can work from sample, anonymized, or redacted workflows. This event is educational and operational, not legal advice.</p>
-                    </details>
-                    <details>
-                        <summary>What practice areas does this work for?</summary>
-                        <p>The workshop is practice-area flexible because the prep call starts with your workflow. The best use cases are repeated tasks: intake, summaries, follow-up, drafting support, client updates, internal checklists, and firm process.</p>
                     </details>
                     <details>
                         <summary>Can I send someone from my firm?</summary>
@@ -879,7 +974,7 @@
                     <p class="kicker">May 14, 2026 - 9:00 AM-12:00 PM</p>
                     <h2>Reserve one of 12 seats.</h2>
                     <p class="section-lead">Your seat gives you a prep call, the live workshop, and a follow-up call focused on one workflow your firm can actually use. The room is capped at 12 so there is time to understand your firm and help you build.</p>
-                    <a class="button" href="https://book.stripe.com/5kQfZhdjtca52UK5FF6Na01">Checkout with Stripe</a>
+                    <a class="button" href="https://book.stripe.com/5kQfZhdjtca52UK5FF6Na01">Book Now</a>
                 </div>
             </section>
         </main>
@@ -922,7 +1017,21 @@
     </footer>
 
     <div class="mobile-cta" aria-hidden="true">
-        <a class="button" tabindex="-1" href="https://book.stripe.com/5kQfZhdjtca52UK5FF6Na01">Reserve your seat - $1,200</a>
+        <a class="button" tabindex="-1" href="https://book.stripe.com/5kQfZhdjtca52UK5FF6Na01">Reserve your seat</a>
     </div>
+    <script>
+        const videoHero = document.querySelector("[data-video-hero]");
+        const videoFrame = document.getElementById("overview-video-frame");
+        const openVideoButton = document.querySelector("[data-video-open]");
+        const pageOrigin = window.location.origin === "null" ? "https://www.joulestudios.com" : window.location.origin;
+        const videoEmbedUrl = `https://www.youtube.com/embed/2pZxQKB3qXg?autoplay=1&playsinline=1&rel=0&modestbranding=1&origin=${encodeURIComponent(pageOrigin)}`;
+
+        function openVideo() {
+            videoFrame.innerHTML = `<iframe src="${videoEmbedUrl}" title="Claude for law firms video overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+            videoHero.classList.add("is-playing");
+        }
+
+        openVideoButton.addEventListener("click", openVideo);
+    </script>
 </body>
 </html>
